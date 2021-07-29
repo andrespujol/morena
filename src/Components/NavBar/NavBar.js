@@ -2,23 +2,41 @@ import React from 'react';
 import { CartWidget } from './CartWidget/CartWidget';
 import './NavBar.css'
 import logo from './logo.png';
+import 'bootstrap/dist/css/bootstrap.css'
+import { Nav, Navbar } from 'react-bootstrap';
 
 
 export const NavBar = () => {
+    
     return (
-        <>
-            <nav className="navBar">
-                <div class="nav-wrapper menu">
-                <a href="index.html" class="brand-logo center menu__logo"><img src={logo} className='logo' alt="logo" /></a>
-                <ul id="nav-mobile" class="left hide-on-med-and-down menu__ul">
-                    <li class="menu__li"><a href="sass.html">Products</a></li>
-                    <li class="menu__li"><a href="badges.html">Sobre nosotros</a></li>
-                    <li class="menu__li"><a href="collapsible.html">Contacto</a></li>
-                </ul>
-                <CartWidget/>
-                </div>
 
-            </nav>
+        <>
+    <div className="App">
+      <Navbar bg="white" variant="dark"
+        sticky="top" expand="sm" collapseOnSelect>
+        <Navbar.Brand className="div_logo">
+            <img src={logo} alt="logo" className="logo" />
+        </Navbar.Brand>
+
+        <Navbar.Toggle className="coloring" />
+        <Navbar.Collapse>
+          <Nav className="menu">
+            {/* <NavDropdown title="Products">
+              <NavDropdown.Item href="#products/tea">Tea</NavDropdown.Item>
+              <NavDropdown.Item href="#products/coffee">Coffee</NavDropdown.Item>
+              <NavDropdown.Item href="#products/chocolate">Chocolate</NavDropdown.Item>
+              <NavDropdown.Divider />
+              <NavDropdown.Item href="#products/promo">Promo</NavDropdown.Item>
+            </NavDropdown> */}
+            <Nav.Link href="#blog" className="links">Productos</Nav.Link>
+            <Nav.Link href="#about-us" className="links">Sobre nosotros</Nav.Link>
+            <Nav.Link href="#contact-us" className="links">Contacto</Nav.Link>
+            <CartWidget/>
+          </Nav>
+        </Navbar.Collapse>
+
+      </Navbar>
+    </div>
 
         </>
     )

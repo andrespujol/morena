@@ -4,7 +4,8 @@ import { ItemListContainer } from './Components/ItemListContainer/ItemListContai
 import {Banner} from './Components/Banner/Banner'
 
 
-import 'materialize-css/dist/css/materialize.min.css'
+
+
 import './App.css'
 
 
@@ -13,7 +14,7 @@ const App = () =>
 
     <NavBar />
     <Banner />
-    <ItemListContainer/>
+    <ItemListContainer greeting="INDUMENTARIA FEMENINA"/>
 </>
 
 export default App;
