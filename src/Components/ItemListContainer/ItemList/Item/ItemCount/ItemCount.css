@@ -1,32 +1,36 @@
 .botonera {
     display: grid;
     grid-template-areas: 
-        "mas total menos"
+        "menos total mas"
         "conf conf conf";
 }
 .boton {
     width: 3rem;
     height: 2rem;
-    color: white;
-    background-color: #f91987 !important;
-    border: 1px  solid #9728a3;
+
+    border: none;
 }
 .btn1 {
     width: 100%;
     text-align: center;
     grid-area: total;
     margin: 0 auto;
+    padding-top: 5px;
+    font-weight: bold;
 }
 .btn2 {
     width: 100%;
     grid-area: mas;
+    font-weight: bold;
 }
 .btn3 {
     width: 100%;
     grid-area: menos;
+    font-weight: bold;
 }
 .btn4 {
     height: auto;
     width: 100%;
     grid-area: conf;
+    font-weight: bold;
 }
