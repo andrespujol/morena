@@ -9,14 +9,16 @@ export const Item = ({ title, description, pictureUrl, price, id, stock}) => {
     }
     return (
         <div className="card">
-            <BrowserRouter>
+            <a href={`Item/${id}`}><h4>{title}</h4></a>
+            {/* <BrowserRouter>
                 <Link to={`Item/${id}`} >
                     <h4>{title}</h4>
-            </Link>
-            </BrowserRouter>
-            <p className="description">Descripción:{description}</p>
+                </Link>
+            </BrowserRouter> */}
+            
             <p className="price">Precio: ${price}</p>
-            <img src={pictureUrl} alt={Item.title} />
+            <a href={`Item/${id}`}><img src={pictureUrl} alt={Item.title} /></a>
+            
             <ItemCount stock={stock} initial={1} onAdd={onAdd}/>
         </div>
     )

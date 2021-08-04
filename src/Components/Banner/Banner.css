@@ -6,7 +6,25 @@
     justify-content: center;
 }
 .banner img {
-    width: 14%;
+    width: 40%;
 
     align-self: center;
+}
+
+@media only screen and (min-width: 481px){
+    .banner img {
+        width: 34%;
+    
+        align-self: center;
+    }
+
+}
+
+@media only screen and (min-width: 1024px){
+    .banner img {
+        width: 14%;
+    
+        align-self: center;
+    }
+
 }

@@ -13,9 +13,9 @@ export const NavBar = () => {
         <>
     <div className="App">
       <Navbar bg="white" variant="dark"
-        sticky="top" expand="sm" collapseOnSelect>
+        sticky="top" expand="sm" collapseOnSelect className="navBarMenu">
         <Navbar.Brand className="div_logo">
-            <img src={logo} alt="logo" className="logo" />
+            <a href="./index.html"><img src={logo} alt="logo" className="logo" /></a>
         </Navbar.Brand>
 
         <Navbar.Toggle className="coloring" />

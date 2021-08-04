@@ -8,7 +8,7 @@ export const Footer = () => {
         <div className="footer">
 
             <div className="logos">
-                <img src={instagram} alt="Logo instagram"className="instagram" />
+                <a href="https://www.instagram.com/tiendamoreok/" target="example" rel="noopener"><img src={instagram} alt="Logo instagram"className="instagram" /></a>
                 <img src={whatsapp} alt="Logo whatsapp" className="whatsapp"/>
             </div>
             <div className="firma">

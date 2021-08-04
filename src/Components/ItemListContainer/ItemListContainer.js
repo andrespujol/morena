@@ -6,11 +6,13 @@ import { ItemList } from './ItemList/ItemList';
 
 export const ItemListContainer = ({greeting}) => {
     const [products, setProducts] = useState([])
+    const [loading, setLoading] =useState(true)
 
     const items = async() => {
         const data = await fetch('https://mocki.io/v1/1c56aa8a-d8a8-4bde-9081-e16b334aa8c8')
         const product = await data.json()
         setProducts(product)
+        setLoading(false)
     }
 
     useEffect(()=>{
@@ -20,7 +22,7 @@ export const ItemListContainer = ({greeting}) => {
     }, [])
 
 
-    
+    if(loading) return <h3>Loading...</h3>
     return (
         <>
         <div>

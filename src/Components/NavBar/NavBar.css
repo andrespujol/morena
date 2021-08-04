@@ -9,15 +9,16 @@
     width: 100%;
 }
 .div_logo {
-    width: 40%;
+    width: 50%;
 }
 .logo{
-    width: 40%;
+    width: 100%;
     margin: 10px;
 }
 .nav-link{
     font-size: 1rem;
     color: black !important;
+    transition: none !important;
 }
 .nav-link:hover {
     background-color: #f91987;
@@ -25,12 +26,48 @@
     color: white !important;
     border: none;
     border-radius: 10px;
-}
-.coloring {
-    background-color: #f91987 !important;
 
 }
+
 .navbar-toggler {
+    color: #f91987 !important;
     margin-right: 1rem;
 }
+.navbar-toggler-icon {
+    background-color: #f91987 ;
+    width: 2.5rem !important;
+    height: 2.5rem !important;
+    border-radius: 5px;
 
+}
+
+@media only screen and (min-width: 481px){
+    .div_logo {
+        width: 50%;
+    }
+    .logo{
+        width: 80%;
+        margin: 10px;
+    }
+
+}
+
+@media only screen and (min-width: 1024px){
+    .div_logo {
+        width: 20%;
+    }
+    .logo{
+        width: 80%;
+        margin: 10px;
+    }
+    .menu {
+        display: flex;
+        justify-content: flex-end;
+        width: 80%;
+    }
+    .collapse {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+}
