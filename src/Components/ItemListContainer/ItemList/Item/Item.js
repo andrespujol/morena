@@ -1,25 +1,18 @@
 import React from 'react'
 import './Item.css'
-import {Link, BrowserRouter} from 'react-router-dom'
-import ItemCount from './ItemCount/ItemCount'
+import {Link} from 'react-router-dom'
+
 
 export const Item = ({ title, description, pictureUrl, price, id, stock}) => {
-    const onAdd = (cantidad) => {
-        console.log(cantidad)
-    }
+
     return (
         <div className="card">
-            <a href={`Item/${id}`}><h4>{title}</h4></a>
-            {/* <BrowserRouter>
-                <Link to={`Item/${id}`} >
-                    <h4>{title}</h4>
-                </Link>
-            </BrowserRouter> */}
-            
+            <Link to={`Item/${id}`} >
+                <h4>{title}</h4>
+            </Link>
             <p className="price">Precio: ${price}</p>
-            <a href={`Item/${id}`}><img src={pictureUrl} alt={Item.title} /></a>
-            
-            <ItemCount stock={stock} initial={1} onAdd={onAdd}/>
+            <Link to={`Item/${id}`}><img src={pictureUrl} alt={Item.title} /></Link>
+
         </div>
     )
 }

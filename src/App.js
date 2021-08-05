@@ -14,28 +14,25 @@ import './App.css'
 
 const App = () => 
 <>
-<BrowserRouter>
+    <BrowserRouter>
       <NavBar/>
-      
+      <Banner/>
+
       <Switch>
         <Route exact path='/'>
-            <Banner/>
             <ItemListContainer/>
-            <Footer/>
         </Route>
         <Route exact path='/category/:categoryName'>
-
           <ItemListContainer />
         </Route>
         <Route exact path='/item/:id'>
           <ItemDetailContainer/>
         </Route>
         <Route exact path='*'>
-        <h1>error</h1>
+          <h1>error</h1>
         </Route>
-
-
       </Switch>
+      <Footer/>
     </BrowserRouter>
 </>
 

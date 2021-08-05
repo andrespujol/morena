@@ -2,6 +2,7 @@ import axios from 'axios';
 import React, {useEffect, useState} from 'react';
 import { useParams } from 'react-router-dom';
 import {ItemDetail} from './ItemDetail/ItemDetail'
+import './ItemDetailContainer.css'
 
 
 
@@ -21,7 +22,7 @@ export const ItemDetailContainer = () => {
 
     if(loading) return <h1>Loading...</h1>
     return (
-        <div>
+        <div className="containerDetail">
             <ItemDetail {...item}/>
         </div>
     )

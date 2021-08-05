@@ -1,5 +1,6 @@
 import React from 'react';
 import { CartWidget } from './CartWidget/CartWidget';
+import { Link } from 'react-router-dom';
 import './NavBar.css'
 import logo from './logo.png';
 import 'bootstrap/dist/css/bootstrap.css'
@@ -15,7 +16,7 @@ export const NavBar = () => {
       <Navbar bg="white" variant="dark"
         sticky="top" expand="sm" collapseOnSelect className="navBarMenu">
         <Navbar.Brand className="div_logo">
-            <a href="./index.html"><img src={logo} alt="logo" className="logo" /></a>
+            <Link to="/"><img src={logo} alt="logo" className="logo" /></Link>
         </Navbar.Brand>
 
         <Navbar.Toggle className="coloring" />

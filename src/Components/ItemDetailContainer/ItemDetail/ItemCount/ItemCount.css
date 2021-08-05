@@ -1,8 +1,10 @@
 .botonera {
     display: grid;
+    grid-template-rows: 2rem 2rem;
     grid-template-areas: 
         "menos total mas"
         "conf conf conf";
+    width: 100%;
 }
 .boton {
     width: 3rem;
@@ -17,6 +19,7 @@
     margin: 0 auto;
     padding-top: 5px;
     font-weight: bold;
+    height: auto;
 }
 .btn2 {
     width: 100%;
@@ -29,8 +32,28 @@
     font-weight: bold;
 }
 .btn4 {
-    height: auto;
+    height: 2rem;
     width: 100%;
     grid-area: conf;
     font-weight: bold;
+}
+
+@media only screen and (min-width: 481px){
+
+}
+
+@media only screen and (min-width: 1024px){
+    .botonera {
+        display: grid;
+        grid-template-rows: 2rem 2rem;
+        grid-template-areas: 
+            "menos total mas"
+            "conf conf conf";
+        width: 100%;
+    }
+
+    .btn4 {
+        height: 3rem;
+    }
+
 }
