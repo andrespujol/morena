@@ -3,7 +3,7 @@ import './Item.css'
 import {Link} from 'react-router-dom'
 
 
-export const Item = ({ title, description, pictureUrl, price, id, stock}) => {
+export const Item = ({ title, pictureUrl, price, id}) => {
 
     return (
         <div className="card">

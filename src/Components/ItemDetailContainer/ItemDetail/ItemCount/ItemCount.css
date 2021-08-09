@@ -20,16 +20,21 @@
     padding-top: 5px;
     font-weight: bold;
     height: auto;
+    border: 1px solid #f91987;
+    /* border-top: 1px solid #f91987; */
 }
+
 .btn2 {
     width: 100%;
     grid-area: mas;
     font-weight: bold;
+    border-top: 1px solid #f91987;
 }
 .btn3 {
     width: 100%;
     grid-area: menos;
     font-weight: bold;
+    border-top: 1px solid #f91987;
 }
 .btn4 {
     height: 2rem;
@@ -49,7 +54,8 @@
         grid-template-areas: 
             "menos total mas"
             "conf conf conf";
-        width: 100%;
+        /* width: 100%; */
+        object-fit:cover;
     }
 
     .btn4 {

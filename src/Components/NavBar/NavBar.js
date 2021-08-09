@@ -1,6 +1,6 @@
 import React from 'react';
 import { CartWidget } from './CartWidget/CartWidget';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import './NavBar.css'
 import logo from './logo.png';
 import 'bootstrap/dist/css/bootstrap.css'
@@ -29,9 +29,9 @@ export const NavBar = () => {
               <NavDropdown.Divider />
               <NavDropdown.Item href="#products/promo">Promo</NavDropdown.Item>
             </NavDropdown> */}
-            <Nav.Link href="#blog" className="links">Productos</Nav.Link>
-            <Nav.Link href="#about-us" className="links">Sobre nosotros</Nav.Link>
-            <Nav.Link href="#contact-us" className="links">Contacto</Nav.Link>
+            <NavLink to="#blog" className="links">Productos</NavLink>
+            <NavLink to="#about-us" className="links">Sobre nosotros</NavLink>
+            <NavLink to="#contact-us" className="links">Contacto</NavLink>
             <CartWidget/>
           </Nav>
         </Navbar.Collapse>

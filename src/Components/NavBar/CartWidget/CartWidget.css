@@ -2,5 +2,6 @@
 .basket  {
     width: 3rem;
     height: 3rem;
-
+    margin: 1rem;
+    margin-top: 0.1rem;
 }
