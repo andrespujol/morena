@@ -20,13 +20,16 @@ const App = () =>
 
       <Switch>
         <Route exact path='/'>
-            <ItemListContainer/>
+            <ItemListContainer greeting="Indumentaria femenina"/>
         </Route>
         <Route exact path='/category/:categoryName'>
           <ItemListContainer />
         </Route>
         <Route exact path='/item/:id'>
           <ItemDetailContainer/>
+        </Route>
+        <Route exact path='/CartWidget'>
+          <h1>Carrito</h1>
         </Route>
         <Route exact path='*'>
           <h1>error</h1>

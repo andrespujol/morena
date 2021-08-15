@@ -5,6 +5,7 @@
         "menos total mas"
         "conf conf conf";
     width: 100%;
+
 }
 .boton {
     width: 3rem;
@@ -42,7 +43,14 @@
     grid-area: conf;
     font-weight: bold;
 }
-
+.carrito {
+    background-color: #f91987;
+    width: 4.5rem;
+    height: 2.4rem;
+    border-radius: 5px;
+    text-align: center;
+    padding-top: 0.4rem;
+}
 @media only screen and (min-width: 481px){
 
 }
@@ -62,4 +70,9 @@
         height: 3rem;
     }
 
+}
+@media only screen and (min-width: 1624px){
+    .botonera {
+        margin-bottom: 1rem;
+    }
 }

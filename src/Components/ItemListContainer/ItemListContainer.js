@@ -21,8 +21,8 @@ export const ItemListContainer = ({greeting}) => {
         },2000)
     }, [])
 
-
     if(loading) return <h3>Loading...</h3>
+    
     return (
         <>
         <div>
