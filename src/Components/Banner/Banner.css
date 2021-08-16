@@ -20,13 +20,33 @@
     }
 
 }
+@media only screen and (min-width: 769px){
+    .banner {
+        height: 10rem;
+    }
+    .banner img {
+        width: 20%;
+    
+        align-self: center;
+    }
 
+}
 @media only screen and (min-width: 1024px){
     .banner {
         height: 13rem;
     }
     .banner img {
-        width: 14%;
+        width: 17%;
+        align-self: center;
+    }
+
+}
+@media only screen and (min-width: 1024px){
+    .banner {
+        height: 14rem;
+    }
+    .banner img {
+        width: 15%;
         align-self: center;
     }
 

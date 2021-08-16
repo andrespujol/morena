@@ -1,19 +1,29 @@
 .footer {
     background: linear-gradient(90deg, #f91987 5%, #7580d6 13%,  #9728a3 50%,#f4c24e 90%, #7ae8b0 100%);
+    display: flex;
+    justify-content: space-between;
+    height: 3rem;
+}
+.firma {
+    display: flex;
+    justify-content: flex-start;
+    align-self: center;
+    padding-left: 1rem;
+}
+.firma p{
+    margin: 0;
+    color: white;
+    text-align: center;
 }
 .logos {
     display: flex;
     justify-content: flex-end;
-    padding-top: 2px;
+    align-items: center;
+    padding-right: 1rem;
 }
 .instagram {
     width: 3rem;
 }
 .whatsapp {
     width: 2rem;
-}
-.firma p{
-    margin: 0;
-    color: white;
-    text-align: center;
 }

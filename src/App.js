@@ -28,7 +28,7 @@ const App = () =>
         <Route exact path='/item/:id'>
           <ItemDetailContainer/>
         </Route>
-        <Route exact path='/CartWidget'>
+        <Route exact path='/Cart'>
           <h1>Carrito</h1>
         </Route>
         <Route exact path='*'>

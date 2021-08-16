@@ -1,29 +1,54 @@
-import React from 'react'
+import React, {useState} from 'react'
 import './ItemDetail.css'
-import ItemCount from './ItemCount/ItemCount'
+import ItemCount from './ItemCount/ItemCount';
+import { Link } from 'react-router-dom';
+
 
 
 
 export const ItemDetail = ({title, pictureUrl, price, description, stock}) => {
-    console.log(stock)
+    const [unidades, setUnidades] = useState()
+    
+
     const onAdd = (cantidad) => {
-        console.log(`Agregaste ${cantidad} ${title}`)
+        setUnidades(cantidad)
+        console.log(unidades)
+        console.log(``)
     }
-    return (
-        <>
+
+        if(unidades > 0) {
+            return (
+                <>
         <article className="detail">
-            <h3>{title}</h3>
+            <h3 className="detailTitle">{title}</h3>
             <div className="detailImg">
-            <img src={pictureUrl} alt={title}/> 
+                <img src={pictureUrl} alt={title}/> 
             </div>
-            
-            <h4>${price}</h4>
-            <p>{description} </p>
-            <ItemCount stock={stock} initial={stock>=1?1:0} onAdd={onAdd} title={title}/>
+            <div className="detailBuy">
+                <p>Genial!</p>
+                <p>{`Agregaste ${unidades} ${title}`} </p>
+                <Link to="/Cart"><button className="finalizar">Terminar compra</button></Link>
+            </div>
+
         </article>
+            </>
+            )
+        } else {
+            return (
+                <>
+        <article className="detail">
+            <h3 className="detailTitle">{title}</h3>
+            <div className="detailImg">
+                <img src={pictureUrl} alt={title}/> 
+            </div>
+            <div className="detailText">
+                <h4>${price}</h4>
+                <p>{description} </p>
+                <ItemCount stock={stock} initial={stock>=1?1:0} onAdd={onAdd} title={title}/>
+            </div>
 
+        </article>
         </>
-    )
-}
-
-
+        )
+            }
+    }

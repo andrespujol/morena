@@ -1,106 +1,134 @@
-
 .detail {
     display: flex;
-    flex-wrap: wrap;
-    width: 80%;
+    flex-direction: column;
+}
+
+.detailImg, .detailText{
+    width: 90%;
     margin: 0 auto;
     margin-bottom: 2rem;
-    border-style: solid;
-    border-width: 10px;
-    border-color: rgb(221, 208, 208);
+    border: 5px solid rgb(221, 208, 208);
     border-radius: 10px;
-    box-sizing: border-box;
 }
-.detail h3, .detail p, .detail h4 {
-    text-align: center;
+.detailImg:hover, .detailText:hover {
+    box-shadow: 0px 0px 12px 8px rgba(0,0,0,0.49);
+    -webkit-box-shadow: 0px 0px 12px 8px rgba(0,0,0,0.49);
+    -moz-box-shadow: 0px 0px 12px 8px rgba(0,0,0,0.49);
+}
+.detailImg img {
     width: 100%;
+    border-radius: 5px;
 }
-.detail h3{
-    font-size: 2rem;
+.detailText h4 , .detailText p {
+    text-align: center;
 }
 .detail h4 {
     background-color:rgba(249, 25, 135, 0.5);
-    font-size: 1.5rem;
     color: white;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
 }
-.detail img {
+.detailBuy {
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+    border: 5px solid rgb(221, 208, 208);
+    border-radius: 10px;
+}
+.detailBuy p {
+
+    text-align: center;
+    color: #f91987;
+    
+}
+.detailBuy p:first-child {
+    margin-top: 1rem;
+}
+.finalizar {
+    border: none;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    height: 4.1rem;
     width: 100%;
-
-
+    color: white;
+    font-size: 2rem;
+    background-color:rgba(249, 25, 135, 0.5);
+}
+.finalizar:hover {
+    background-color: #f91987;
 }
 
-@media only screen and (min-width: 481px){
-    .detail {
-        width: 70%;
-    }
-    .detail h3{
-        font-size: 2.5rem;
-    }
-}
 @media only screen and (min-width: 769px){
     .detail {
-        width: 60%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: unset;
+        width: 100%;
+    }
+    .detailTitle {
+        width: 100%;
+        align-self: center;
+    }
+    .detailImg  {
+        width: 50%;
+        height: 60%;
+    }
+    .detail img{
+        width: 100%;
+        height: auto;
+      }
+      @supports(object-fit: cover){
+        .detail img{
+            height: 100%;
+            object-fit: cover;
+            object-position: top center;
+        }}
+    .detailText,.detailBuy {
+        width:40%;
+        height: 9.3rem;
+        margin-bottom: 10rem;
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+    }
+    .detailBuy {
+        height: 10.7rem;
     }
 }
 
 @media only screen and (min-width: 1024px){
-    .detail {
+    .detailImg  {
         width: 50%;
-        height: 60rem;
+        height: 60%;
     }
-    .detail h3, .detail p, .detail h4  {
-        margin: 0;
+    .detailText {
+        height: 9.4rem;
+    }
+    .detailBuy {
+        height: 10.4rem;
+    }
+    .finalizar {
+        height: 3.8rem;
+    }
+}
 
+@media only screen and (min-width: 1624px){
+    .detail {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: unset;
+        width: 100%;
     }
-    .detail h3{
-        font-size: 3rem;
+    .detailImg  {
+        width: 40%;
+        height: 60%;
+    }
+    .detailText, .detailBuy {
+        width:40%;
+        height: 10.4rem;
+        margin-bottom: 10rem;
+    }
+    .detailBuy p:first-child {
         margin-top: 1rem;
     }
-    .detail p {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-bottom: 0.5rem;
-    }
-    .detail {
-        height: auto;
-    }
-    .detail img{
-        width: 100%;
-        height: auto;
-      }
-      @supports(object-fit: cover){
-          .detail img{
-            height: 100%;
-            object-fit: cover;
-            object-position: center center;
-          }}
-    .detail h4 {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 3rem;
-    }
-} 
-@media only screen and (min-width: 1624px){
-    /* .detail {
-
-    } */
-    .detail h3, .detail p, .detail h4  {
-        margin: 0;
-
-    }
-    .detail {
-        height: auto;
-    }
-    .detail img{
-        width: 100%;
-        height: auto;
-      }
-      @supports(object-fit: cover){
-          .detail img{
-            height: 100%;
-            object-fit: cover;
-            object-position: center center;
-          }}
-} 
+}
