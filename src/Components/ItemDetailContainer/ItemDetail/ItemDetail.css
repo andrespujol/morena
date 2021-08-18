@@ -1,6 +1,7 @@
 .detail {
     display: flex;
     flex-direction: column;
+    
 }
 
 .detailImg, .detailText{

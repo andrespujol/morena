@@ -3,7 +3,7 @@ import './ItemCount.css';
 
 
 
-const ItemCount = ({ stock , initial , onAdd, title }) => {
+const ItemCount = ({ stock , initial , onAdd }) => {
 
     const [contador,setContador] = useState(initial)
 
@@ -22,6 +22,7 @@ const ItemCount = ({ stock , initial , onAdd, title }) => {
             onAdd(contador)
         }
     }
+
 
     return (
         <>
