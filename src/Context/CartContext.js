@@ -14,7 +14,12 @@ export const CustomProvider = ({children}) => {
 		cart.map(item => total += item.item.price * item.quantity);
 		return total;
 	}
-
+    const getTotalQuantity = () => {
+        if (cart.length === 0) {
+            console.log(0)
+        }else {
+            return cart.length
+        }}
 
     const addItem = (item) => {
 
@@ -36,12 +41,12 @@ export const CustomProvider = ({children}) => {
         setCart([])
     }
     const isInCart = (itemId) => {
-        // const repeatedItem = cart.find( (item) => item.prod_id === itemId);
+        return cart.filter(item => item.item.id === itemId).length === 1
     }
 
     
     return (
-        <Provider value={{cart, addItem, removeItem, clear, isInCart,empty, cartTotal}}>
+        <Provider value={{cart, addItem, removeItem, getTotalQuantity, clear, isInCart,empty, cartTotal}}>
             {children}
         </Provider>
     )
