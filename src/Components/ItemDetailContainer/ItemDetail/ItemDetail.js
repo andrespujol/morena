@@ -23,7 +23,6 @@ export const ItemDetail = (item) => {
         }
         addItem(itemAgregado)
         setUnidades(cantidad)
-        console.log(itemAgregado)
     }
 
 
