@@ -15,11 +15,11 @@
 ***
 ## Versionado 📌
 
-Usamos [GitHub](https://github.com/) para el versionado. 
+Usé [GitHub](https://github.com/) para el versionado. 
 
 
 
 ## Autor ✒️
 
 
-* **Andrés Pujol** - *Desarrollo web* - [Linkedin](https://www.linkedin.com/in/andrespujol/)
+* **Andrés Pujol** - [Linkedin](https://www.linkedin.com/in/andrespujol/)
