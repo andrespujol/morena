@@ -49,22 +49,6 @@ export const ItemListContainer = ({greeting}) => {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     
     useEffect (() => {
 
@@ -85,6 +69,7 @@ export const ItemListContainer = ({greeting}) => {
             })
             setProducts(resultado_parseado)
             console.log(resultado_parseado)
+            setLoading(false)
         })
     }, [])
 
