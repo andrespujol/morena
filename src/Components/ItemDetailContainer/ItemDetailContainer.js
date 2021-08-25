@@ -1,8 +1,9 @@
 import axios from 'axios';
 import React, {useEffect, useState} from 'react';
 import { useParams } from 'react-router-dom';
-import {ItemDetail} from './ItemDetail/ItemDetail'
-import './ItemDetailContainer.css'
+import {ItemDetail} from './ItemDetail/ItemDetail';
+import './ItemDetailContainer.css';
+
 
 
 
@@ -19,6 +20,38 @@ export const ItemDetailContainer = () => {
             setLoading(false)
         })();
     },[id]);
+
+
+
+
+
+
+
+
+    // useEffect (() => {
+        
+    //     const db = firestore ()
+    //     const collection = db.collection("Productos")
+
+    //     const query = collection.get()
+    //     query.then((resultado)=> {
+    //         const resultado_parseado= []
+    //         resultado.forEach((documento)=>{
+    //             const id =documento.id
+    //             const data = documento.data()
+    //             const data_final = {id,...data}
+    //             resultado_parseado.push(data_final)
+    //             console.log(data_final)
+    //         })
+
+    //     })
+    // })
+
+
+
+
+
+
 
     if(loading) return <h1>Loading...</h1>
     return (

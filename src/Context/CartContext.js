@@ -16,7 +16,6 @@ export const CustomProvider = ({children}) => {
 	}
     const getTotalQuantity = () => {
         if (cart.length === 0) {
-            console.log(0)
         }else {
             return cart.length
         }}
@@ -41,6 +40,7 @@ export const CustomProvider = ({children}) => {
         setCart([])
     }
     const isInCart = (itemId) => {
+
         return cart.filter(item => item.item.id === itemId).length === 1
     }
 
