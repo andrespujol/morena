@@ -3,6 +3,10 @@
     flex-wrap: wrap;
     width: 100%;
 }
+.loadingDetail {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
 
 
 @media only screen and (min-width: 481px){
@@ -12,8 +16,16 @@
     .containerDetail {
         justify-content: space-around;
     }
+    .loadingDetail {
+        font-size: 3rem;
+
+    }
+    
 }
 
 @media only screen and (min-width: 1024px){
+    .loadingDetail {
+        font-size: 4rem;
 
+    }
 } 

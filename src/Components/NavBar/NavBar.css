@@ -31,7 +31,12 @@
     border-radius: 10px;
 
 }
-
+ #basic-nav-dropdown {
+     color: #000;
+ }
+ .dropdown-item {
+     color: #f91987;
+ }
 .navbar-toggler {
     color: #f91987 !important;
     margin-right: 1rem;
