@@ -70,12 +70,13 @@ export const ItemDetailContainer = () => {
     },[id])
 
     const ReturnProducts = ({product}) =>{       
-        const list = product.map((elemento) =>{                
+        const list = product.map((elemento)=>{                
                     if(elemento.id === id){
                     return <ItemDetail item={elemento}/>
-                    }    })
-                
+                    }    
+                })
                 return list;
+                
     }
 
     return loading ? <h1 className="loadingDetail">Loading...</h1> : (

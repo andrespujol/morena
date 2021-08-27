@@ -22,7 +22,7 @@ export const NavBar = () => {
         <Navbar.Toggle className="coloring" />
         <Navbar.Collapse>
           <Nav className="menu">
-            <NavDropdown title="Products" className="links" id="basic-nav-dropdown">
+            <NavDropdown title="Productos" className="links" id="basic-nav-dropdown">
               <NavDropdown.Item href="/category/Camisas">Camisas</NavDropdown.Item>
               <NavDropdown.Item href="/category/Remeras">Remeras</NavDropdown.Item>
               <NavDropdown.Item href="/category/Blusas">Blusas</NavDropdown.Item>
