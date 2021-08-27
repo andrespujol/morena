@@ -10,28 +10,29 @@ import { useParams } from 'react-router-dom';
 
 export const ItemListContainer = ({greeting}) => {
     const [products, setProducts] = useState([])
-    const [loading, setLoading] =useState(true)
+    const [loading, setLoading] =useState(false)
     const { categoryName } =useParams()
 
 
 
     
     useEffect (() => {
-
+        setLoading(true)
         const db = getFirestore();
         const itemCollection = db.collection("Productos");
         const filteredCollection = categoryName ? itemCollection.where("categoryId", "==", categoryName ) : itemCollection;
 
         filteredCollection.get().then((querySnapshot) => {
             if (querySnapshot.size === 0) {
-                console.log('no results');
+                console.log('No hay productos');
             }
-   
             const filteredItems = querySnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
-            console.log(filteredItems)
             setProducts(filteredItems);
+        }, err => {
+            console.log(err);
+        }).finally(result => {
             setLoading(false);
-        })
+        });
 
     }, [categoryName]);
 

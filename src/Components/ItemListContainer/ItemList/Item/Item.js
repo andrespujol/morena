@@ -11,7 +11,7 @@ export const Item = ({ title, pictureUrl, price, id}) => {
                 <h4>{title}</h4>
             </Link>
             <p className="price">Precio: ${price}</p>
-            <Link to={`Item/${id}`}><img src={pictureUrl} alt={Item.title} /></Link>
+            <Link to={`/Item/${id}`}><img src={pictureUrl} alt={Item.title} /></Link>
 
         </div>
     )

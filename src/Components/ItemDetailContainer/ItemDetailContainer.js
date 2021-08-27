@@ -1,45 +1,3 @@
-// import axios from 'axios';
-// import React, {useEffect, useState} from 'react';
-// import { useParams } from 'react-router-dom';
-// import {ItemDetail} from './ItemDetail/ItemDetail';
-// import './ItemDetailContainer.css';
-// import { getFirestore } from '../../Firebase/Firebase';
-
-
-
-
-
-// export const ItemDetailContainer = () => {
-//     const [ item, setItem ] = useState()
-//     const { id } = useParams()
-//     const [loading, setLoading] =useState(true)
-
-
-//     useEffect(() => {
-        
-
-//         getFirestore().collection('Products').doc(id).get()
-//             .then(querySnapshot => {
-//                 setItem({id: id, ...querySnapshot.data()})
-//                 setLoading(false)
-//                 console.log(querySnapshot.data())
-//                 console.log(id)
-//             })
-            
-//             .catch(() => setItem({}))
-//     }, [id])
-
-
-//     if(loading) return <h1>Loading...</h1>
-//     return (
-//         <div className="containerDetail">
-//             <ItemDetail {...item}/>
-//         </div>
-//     )
-// }
-
-
-import axios from 'axios';
 import React, {useEffect, useState} from 'react';
 import { useParams } from 'react-router-dom';
 import {ItemDetail} from './ItemDetail/ItemDetail';
@@ -66,7 +24,7 @@ export const ItemDetailContainer = () => {
 
             
         })
-    },2000)
+    },1000)
     },[id])
 
     const ReturnProducts = ({product}) =>{       

@@ -6,6 +6,7 @@ import {ItemDetailContainer} from './Components/ItemDetailContainer/ItemDetailCo
 import {Banner} from './Components/Banner/Banner'
 import { Footer } from './Components/Footer/Footer';
 import {Cart} from './Components/Cart/Cart'
+import { About } from './Components/About/About'
 import './App.css'
 import { CustomProvider } from './Context/CartContext';
 
@@ -28,6 +29,9 @@ const App = () =>
             </Route>
             <Route exact path='/Cart'>
               <Cart/>
+            </Route>
+            <Route exact path='/About'>
+              <About/>
             </Route>
             <Route exact path='*'>
               <h2>error</h2>

@@ -30,7 +30,7 @@ export const NavBar = () => {
               <NavDropdown.Item href="#products/promo">Promos</NavDropdown.Item> */}
             </NavDropdown>
             {/* <NavLink to="#blog" className="links">Productos</NavLink> */}
-            <NavLink to="#about-us" className="links">Sobre nosotros</NavLink>
+            <NavLink to="/About" className="links">Sobre nosotros</NavLink>
             <NavLink to="#contact-us" className="links">Contacto</NavLink>
             <CartWidget/>
           </Nav>
