@@ -1,0 +1,14 @@
+.about {
+    width: 90%;
+    margin: 0 auto;
+}
+.aboutTitle {
+    font-size: 3rem;
+}
+.AboutP {
+    text-align: center;
+}
+.aboutStrong {
+    color: #f91987;
+    font-weight: bold;
+}

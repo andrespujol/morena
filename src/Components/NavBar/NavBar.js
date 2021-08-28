@@ -26,6 +26,7 @@ export const NavBar = () => {
               <NavDropdown.Item href="/category/Camisas">Camisas</NavDropdown.Item>
               <NavDropdown.Item href="/category/Remeras">Remeras</NavDropdown.Item>
               <NavDropdown.Item href="/category/Blusas">Blusas</NavDropdown.Item>
+              <NavDropdown.Item href="/category/Pantalones">Pantalones</NavDropdown.Item>
               {/* <NavDropdown.Divider />
               <NavDropdown.Item href="#products/promo">Promos</NavDropdown.Item> */}
             </NavDropdown>

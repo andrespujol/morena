@@ -3,7 +3,6 @@ import './ItemDetail.css'
 import ItemCount from './ItemCount/ItemCount';
 import { Link } from 'react-router-dom';
 import { contexto } from '../../../Context/CartContext';
-import { getFirestore } from '../../../Firebase/Firebase';
 
 
 

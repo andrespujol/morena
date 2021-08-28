@@ -21,10 +21,10 @@ export const ItemListContainer = ({greeting}) => {
         const db = getFirestore();
         const itemCollection = db.collection("Productos");
         const filteredCollection = categoryName ? itemCollection.where("categoryId", "==", categoryName ) : itemCollection;
-
+        console.log('hola')
         filteredCollection.get().then((querySnapshot) => {
             if (querySnapshot.size === 0) {
-                console.log('No hay productos');
+                console.log('no result');
             }
             const filteredItems = querySnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
             setProducts(filteredItems);
