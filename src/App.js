@@ -7,7 +7,7 @@ import { Banner } from './Components/Banner/Banner';
 import { Footer } from './Components/Footer/Footer';
 import { Cart } from './Components/Cart/Cart';
 import { About } from './Components/About/About';
-import { Form } from './Components/Form/Form';
+import { Form } from './Components/Cart/Form/Form';
 import './App.css'
 import { CustomProvider } from './Context/CartContext';
 

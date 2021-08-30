@@ -1,5 +1,5 @@
-
 import {  createContext, useState } from 'react';
+import { getFirestore } from '../Firebase/Firebase';
 
 export const contexto = createContext()
 
@@ -34,19 +34,27 @@ export const CustomProvider = ({children}) => {
 
     const clear = () => {
         setCart([])
- 
     }
-    const empty = () =>{
-        setCart([])
-    }
-    const isInCart = (itemId) => {
 
+    const isInCart = (itemId) => {
         return cart.filter(item => item.item.id === itemId).length === 1
     }
+    const buyer = (buyer) =>{
+        let venta ={
+            buyer: buyer,
+            items: cart,
+            total: cartTotal
+        }
+        
+        const db = getFirestore()
+        db.collection('Ordenes').add({venta})
+        
+    }  
+
 
     
     return (
-        <Provider value={{cart, addItem, removeItem, getTotalQuantity, clear, isInCart,empty, cartTotal}}>
+        <Provider value={{cart, addItem, removeItem, getTotalQuantity, clear, isInCart, cartTotal, buyer}}>
             {children}
         </Provider>
     )

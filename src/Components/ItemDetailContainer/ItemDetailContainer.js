@@ -31,7 +31,7 @@ export const ItemDetailContainer = () => {
         const list = product.map((elemento)=>{                
                     if(elemento.id === id){
                     return <ItemDetail item={elemento}/>
-                    }    
+                    }    return "";
                 })
                 return list;
                 

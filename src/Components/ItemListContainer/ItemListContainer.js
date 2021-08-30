@@ -21,7 +21,6 @@ export const ItemListContainer = ({greeting}) => {
         const db = getFirestore();
         const itemCollection = db.collection("Productos");
         const filteredCollection = categoryName ? itemCollection.where("categoryId", "==", categoryName ) : itemCollection;
-        console.log('hola')
         filteredCollection.get().then((querySnapshot) => {
             if (querySnapshot.size === 0) {
                 console.log('no result');
@@ -36,6 +35,7 @@ export const ItemListContainer = ({greeting}) => {
 
     }, [categoryName]);
 
+    
 
     if(loading) return <h3>Loading...</h3>
     
