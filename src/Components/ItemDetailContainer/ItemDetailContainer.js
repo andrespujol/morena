@@ -4,10 +4,6 @@ import {ItemDetail} from './ItemDetail/ItemDetail';
 import './ItemDetailContainer.css';
 import { getFirestore } from '../../Firebase/Firebase';
 
-
-
-
-
 export const ItemDetailContainer = () => {
     const [ item, setItem ] = useState([])
     const { id } = useParams()
@@ -21,8 +17,6 @@ export const ItemDetailContainer = () => {
             const data = query.docs.map(doc => ({...doc.data(), id: doc.id}))            
             setItem(data)
             setLoading(false)
-
-            
         })
     },1000)
     },[id])
@@ -30,11 +24,10 @@ export const ItemDetailContainer = () => {
     const ReturnProducts = ({product}) =>{       
         const list = product.map((elemento)=>{                
                     if(elemento.id === id){
-                    return <ItemDetail item={elemento}/>
-                    }    return "";
+                    return <ItemDetail key={elemento.id} item={elemento}/>
+                    }    return '';
                 })
                 return list;
-                
     }
 
     return loading ? <h1 className="loadingDetail">Loading...</h1> : (

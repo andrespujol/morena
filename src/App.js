@@ -7,9 +7,10 @@ import { Banner } from './Components/Banner/Banner';
 import { Footer } from './Components/Footer/Footer';
 import { Cart } from './Components/Cart/Cart';
 import { About } from './Components/About/About';
-import { Form } from './Components/Cart/Form/Form';
+import { Form } from './Components/Form/Form';
 import './App.css'
 import { CustomProvider } from './Context/CartContext';
+import { Contact } from './Components/Contact/Contact';
 
 
 const App = () => 
@@ -27,6 +28,7 @@ const App = () =>
             <Route exact path='/Cart' component={Cart} />
             <Route exact path='/About' component={About} />
             <Route exact path='/Form' component={Form} />
+            <Route exact path='/Contact' component={Contact} />
             <Route exact path='*' >
               <h2>error</h2>
             </Route>

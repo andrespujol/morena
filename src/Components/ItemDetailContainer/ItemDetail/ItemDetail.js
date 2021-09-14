@@ -4,17 +4,10 @@ import ItemCount from './ItemCount/ItemCount';
 import { Link } from 'react-router-dom';
 import { contexto } from '../../../Context/CartContext';
 
-
-
-
-
-
 export const ItemDetail = ({item}) => {
     const [unidades, setUnidades] = useState()
     const {addItem} = useContext(contexto)
-    
-    // const [cart, setCart] = useContext()
-    
+
 
     const onAdd = (cantidad) => {
         const itemAgregado = {
@@ -24,8 +17,6 @@ export const ItemDetail = ({item}) => {
         addItem(itemAgregado)
         setUnidades(cantidad)
     }
-
-
     if(unidades > 0) {
         return (
             <>

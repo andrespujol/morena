@@ -1,9 +1,8 @@
 import {  createContext, useState } from 'react';
-import { getFirestore } from '../Firebase/Firebase';
 
 export const contexto = createContext()
 
-const {Consumer,Provider} = contexto
+const { Provider } = contexto
 
 export const CustomProvider = ({children}) => {
 
@@ -19,13 +18,17 @@ export const CustomProvider = ({children}) => {
         }else {
             return cart.length
         }}
-
-    const addItem = (item) => {
-
-        setCart([...cart,item])
-        console.log(item)
+    const isInCart = () => {
+        cart.find(item => item.item.id === item.id)
     }
 
+    const addItem = (item) => {
+        if(isInCart(item.id)){
+                <h4>Ya existe el producto</h4>
+                return false
+            }
+            setCart([...cart,item])
+        }
 
     const removeItem = (itemId) => {
         const deleteItem = cart.filter((item) => item.item.id !== itemId)
@@ -36,25 +39,9 @@ export const CustomProvider = ({children}) => {
         setCart([])
     }
 
-    const isInCart = (itemId) => {
-        return cart.filter(item => item.item.id === itemId).length === 1
-    }
-    const buyer = (buyer) =>{
-        let venta ={
-            buyer: buyer,
-            items: cart,
-            total: cartTotal
-        }
-        
-        const db = getFirestore()
-        db.collection('Ordenes').add({venta})
-        
-    }  
 
-
-    
     return (
-        <Provider value={{cart, addItem, removeItem, getTotalQuantity, clear, isInCart, cartTotal, buyer}}>
+        <Provider value={{cart, addItem, removeItem, clear, cartTotal, isInCart, getTotalQuantity}}>
             {children}
         </Provider>
     )

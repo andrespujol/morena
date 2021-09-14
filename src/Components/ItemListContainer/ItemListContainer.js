@@ -32,11 +32,9 @@ export const ItemListContainer = ({greeting}) => {
         }).finally(result => {
             setLoading(false);
         });
-
+        
     }, [categoryName]);
-
     
-
     if(loading) return <h3>Loading...</h3>
     
     return (

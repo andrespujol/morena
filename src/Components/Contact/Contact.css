@@ -1,0 +1,42 @@
+.redes {
+    display: flex;
+    justify-content: center;
+}
+.redesLogos {
+    text-align: center;
+    margin-bottom: 2rem;
+    width: 45%;
+}
+.redesLogos img{
+    width: 40%;
+}
+.location {
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+.location img {
+    width: 100%;
+    border-style: solid;
+    border-width: 10px;
+    border-color: rgb(221, 208, 208);
+    border-radius: 10px;
+}
+
+@media only screen and (min-width: 481px){
+    .card {
+        width: 40%;
+    }
+
+}
+@media only screen and (min-width: 1024px){
+    .card {
+        width: 21%;
+        margin: 1rem;
+    }
+    .card img {
+        width: 100%;
+    }
+
+}
