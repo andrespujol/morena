@@ -10,6 +10,9 @@
 .redesLogos img{
     width: 40%;
 }
+.whatsapp img {
+    width: 38%;
+}
 .location {
     width: 90%;
     margin: 0 auto;
@@ -25,18 +28,41 @@
 }
 
 @media only screen and (min-width: 481px){
-    .card {
-        width: 40%;
+    .instagram h5 {
+        margin-bottom: 2rem;
     }
 
 }
-@media only screen and (min-width: 1024px){
-    .card {
-        width: 21%;
-        margin: 1rem;
+@media only screen and (min-width: 769px){
+    .whatsapp h5 {
+        margin-bottom: 2.2rem;
     }
-    .card img {
-        width: 100%;
+    .location img {
+        width: 60%;
+    }
+}
+@media only screen and (min-width: 1024px){
+    .contacto {
+        display: flex;
+        width: 90%;
+    }
+    .redes {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        align-items: center;
+    }
+    .redesLogos {
+        width: 80%;
+    }
+    .instagram img {
+        width: 40%;
+    }
+    .whatsapp img {
+        width: 38%;
+    }
+    .location img {
+        width: 50%;
     }
 
 }

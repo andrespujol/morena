@@ -4,26 +4,61 @@
     justify-content: space-between;
     height: 3rem;
 }
+
 .firma {
     display: flex;
     justify-content: flex-start;
     align-self: center;
     padding-left: 1rem;
+    width: 60%;
 }
-.firma p{
+.firmaLink{
     margin: 0;
     color: white;
     text-align: center;
+}
+.firmaLink:visited{
+    color: white;
 }
 .logos {
     display: flex;
     justify-content: flex-end;
     align-items: center;
     padding-right: 1rem;
+    width: 40%;
 }
-.instagram {
-    width: 3rem;
+.logosLink {
+    width: 30%;
 }
-.whatsapp {
-    width: 2rem;
+.instagramFooter, .whatsappFooter {
+    width: 100%;
+}
+
+@media only screen and (min-width: 481px){
+    .instagramFooter, .whatsappFooter {
+        width: 80%;
+    }
+}
+@media only screen and (min-width: 769px){
+    .instagramFooter, .whatsappFooter {
+        width: 50%;
+    }
+}
+@media only screen and (min-width: 1024px){
+    .logosLink {
+        width: 20%;
+    }
+    .instagramFooter, .whatsappFooter {
+        width: 50%;
+    }
+
+}
+@media only screen and (min-width: 1624px){
+    .logosLink {
+        width: 10%;
+    }
+    .instagramFooter, .whatsappFooter {
+        width: 55%;
+    }
+
 }

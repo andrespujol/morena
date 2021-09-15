@@ -23,7 +23,7 @@ export const ItemListContainer = ({greeting}) => {
         const filteredCollection = categoryName ? itemCollection.where("categoryId", "==", categoryName ) : itemCollection;
         filteredCollection.get().then((querySnapshot) => {
             if (querySnapshot.size === 0) {
-                console.log('no result');
+                <h2>No result</h2>
             }
             const filteredItems = querySnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
             setProducts(filteredItems);

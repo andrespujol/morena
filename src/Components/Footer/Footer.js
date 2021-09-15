@@ -1,21 +1,18 @@
 import React from 'react'
-import instagram from './instagram.png'
-import whatsapp from './whatsapp.png'
+import instagram from '../../assets/ig.svg'
+import whatsapp from '../../assets/whatsapp.svg'
 import './Footer.css'
-import { Link } from 'react-router-dom'
 
 export const Footer = () => {
     return (
         <div className="footer">
             <div className="firma">
-                <p>@by Andrés Pujol</p>
+            <a href="https://www.linkedin.com/in/andrespujol/" target="_blank" rel="noreferrer" className="firmaLink">@by Andrés Pujol</a>
             </div>
             <div className="logos">
-                <Link to="https://www.instagram.com/tiendamoreok/" target="example" rel="noopener"><img src={instagram} alt="Logo instagram"className="instagram" /></Link>
-                <Link to=""><img src={whatsapp} alt="Logo whatsapp" className="whatsapp"/></Link>
+                <a href="https://www.instagram.com/tiendamoreok/" target="_blank" rel="noreferrer" className="logosLink"><img src={instagram} alt="Logo instagram"className="instagramFooter" /></a>
+                <a href="https://wa.me/541141940037" target="_blank" rel="noreferrer" className="logosLink"><img src={whatsapp} alt="Logo whatsapp" className="whatsappFooter"/></a>
             </div>
-
-
         </div>
     )
 }

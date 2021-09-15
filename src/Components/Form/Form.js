@@ -13,19 +13,43 @@ export const Form = ()  => {
     const [orderId, setOrderId] = useState()
     const [loading, setloading] = useState(false)
     const [show, setShow] = useState(false)   
-    const [buyer, setBuyer] =useState({})
+    const [name, setName] = useState("")
+    const [phone, setPhone] = useState("")
+    const [email, setEmail] = useState("")
 
-    const handleInputChange = (event)=>{        
-        let date = new Date()            
-        setBuyer({...buyer, [event.target.name]:event.target.value, fecha: date})
-        console.log(buyer)
+
+
+    const saveName =  (e) => {
+        const input = e.target
+        const valor = input.value
+        setName(valor)
+    }
+    const savePhone =  (e) => {
+        const input = e.target
+        const valor = input.value
+        setPhone(valor)
+    }
+    const saveEmail =  (e) => {
+        const input = e.target
+        const valor = input.value
+        setEmail(valor)
+    }
+
+
+    const validate = () => {
+        if(name.trim().length && phone.trim().length && email.trim().length) {
+            return true
+        }else{
+            return false
+        }
     }
 
     const newOrder = () => {
+        if (validate()) {
         const db = getFirestore()
         const order = db.collection("Ordenes");
         const newOrder= {
-            buyer: buyer,
+            buyer: {name, phone, email},
             products: cart,
             date: firebase.firestore.Timestamp.fromDate(new Date()),
             total: cartTotal()
@@ -33,24 +57,11 @@ export const Form = ()  => {
         order.add(newOrder).then(({id}) => {
             setOrderId(id)
         }).catch((error) => {
-            if(error) {
-                <Modal>
-                <ModalHeader>
-                    "Error writing document: "
-                </ModalHeader>
-                <ModalBody>
-                    {error}
-                </ModalBody>
-                <ModalFooter>
-                    <Button variant="primary" onClick={handleClose} >Aceptar</Button>
-                </ModalFooter>
-            </Modal>
-            }
-
+            <h2>{error}</h2>
         }).finally(() => {
             setloading(false)
         })
-    }
+}}
     const handleClose = () =>setShow(false);
     const handleShow = () =>setShow(true);
 
@@ -67,13 +78,15 @@ export const Form = ()  => {
 
             <form  onSubmit={enviarDatos}>
 
-                <input type="text" placeholder="Nombre" name="name" id="name" onChange={handleInputChange}  />
-                <input type="email" placeholder="Email" name="email" id="email" onChange={handleInputChange}  />
-                <input type="text" placeholder="Teléfono" name="phone" id="phone" onChange={handleInputChange}   />
-                <button className="submitForm" type="submit" onClick={()=>{newOrder(); clear(); handleShow()}} >Comprar</button>
+                <input type="text" placeholder="Nombre" name="name" id="name" onChange={saveName}  />
+                <input type="email" placeholder="Email" name="email" id="email" onChange={savePhone}  />
+                <input type="text" placeholder="Teléfono" name="phone" id="phone" onChange={saveEmail}   />
+                <button className="submitForm" type="submit" onClick={()=>{ newOrder(); handleShow()}} >Comprar</button>
             </form>
             </div>
+
         </section>
+        { validate() ?
             <Modal show={show} onHide={handleClose}>
                 <ModalHeader>
                     Gracias por tu compra!
@@ -82,9 +95,20 @@ export const Form = ()  => {
                     Tu número de orden es: {orderId}
                 </ModalBody>
                 <ModalFooter>
-                <Link to='/'><Button variant="primary" onClick={handleClose} >Aceptar</Button></Link>
+                <Link to='/'><Button variant="primary" onClick={()=>{handleClose() ; clear()}} >Aceptar</Button></Link>
                 </ModalFooter>
-            </Modal>
+            </Modal> : 
+                    <Modal show={show} onHide={handleClose}>
+                    <ModalHeader>
+                        Error:
+                    </ModalHeader>
+                    <ModalBody>
+                        Debes ingresar tus datos
+                    </ModalBody>
+                    <ModalFooter>
+                    <Button variant="primary" onClick={handleClose} >Aceptar</Button>
+                    </ModalFooter>
+                </Modal>}
         </>
     )
 }

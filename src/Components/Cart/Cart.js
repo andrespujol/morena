@@ -11,23 +11,25 @@ export const Cart = () => {
     if (cart.length > 0 ){
         return (
             <>
-            <div>
-                <h1>Carrito</h1>
-                {cart.map(item =>
+            <section>
+                    <h1>Carrito</h1>
+                <div className="cart">
+                    {cart.map(item =>
                     <article className="cartArticle" key={item.item.id}>
                         <p>Artículo: {item.item.title}</p>
                         <p>Unidades: {item.quantity}</p>
-                        <p>Subtotal: ${item.item.price * item.quantity}</p>
+                        <p className="cartArticleSubtotal">Subtotal: ${item.item.price * item.quantity}</p>
                         <button onClick={()=>removeItem(item.item.id)}>borrar</button>
                     </article>
-                    
-                )}
-                <div className="checkout">
-                    <p>Total: ${cartTotal()}</p>
-                    <Link to="/Form"><button className="checkoutBuy" >Confirmar compra</button></Link>
-                    <button className="checkoutClear" onClick={clear}>Vaciar carrito</button>
+                        
+                    )}
+                    <article className="checkout">
+                        <p>Total: ${cartTotal()}</p>
+                        <Link to="/Form" className="checkoutLink"><button className="checkoutBuy" >Confirmar compra</button></Link>
+                        <button className="checkoutClear" onClick={clear}>Vaciar carrito</button>
+                    </article>
                 </div>
-            </div>
+            </section>
             </>
     )}else {
         return(
