@@ -9,7 +9,11 @@ E-commerce creado en el curso de React de Coderhouse. Se trata de un sitio de ve
 ### Vista previa
 ![Image text](https://i.ibb.co/yVrfbb8/captura.jpg)
 
+
 # Deploy 
+
+![](https://github.com/andrespujol/morena/blob/main/src/assets/visualizaci%C3%B3n.gif)
+
 [https://morena-seven.vercel.app/](https://morena-seven.vercel.app/)
 
 ***
