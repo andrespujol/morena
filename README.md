@@ -1,18 +1,16 @@
 # Morena
 ## Indumentaria femenina
-![Image text](https://ibb.co/DR6f5Qk)
+![Image text](https://github.com/andrespujol/morena/blob/main/src/assets/logo.png)
 
 ***
 ## Descripción 
 E-commerce creado en el curso de React de Coderhouse. Se trata de un sitio de venta de indumentaria femenina
 
 ### Vista previa
-![Image text](https://i.ibb.co/yVrfbb8/captura.jpg)
-
-
-# Deploy 
 
 ![](https://github.com/andrespujol/morena/blob/main/src/assets/visualizaci%C3%B3n.gif)
+
+# Deploy 
 
 [https://morena-seven.vercel.app/](https://morena-seven.vercel.app/)
 
