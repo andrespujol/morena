@@ -45,6 +45,9 @@
     }
 }
 @media only screen and (min-width: 1024px){
+    .footer {
+        height: 10vh;
+    }
     .logosLink {
         width: 20%;
     }
@@ -58,7 +61,7 @@
         width: 10%;
     }
     .instagramFooter, .whatsappFooter {
-        width: 55%;
+        width: 80%;
     }
 
 }

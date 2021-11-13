@@ -17,8 +17,6 @@ export const Form = ()  => {
     const [phone, setPhone] = useState("")
     const [email, setEmail] = useState("")
 
-
-
     const saveName =  (e) => {
         const input = e.target
         const valor = input.value
@@ -95,20 +93,20 @@ export const Form = ()  => {
                     Tu número de orden es: {orderId}
                 </ModalBody>
                 <ModalFooter>
-                <Link to='/'><Button variant="primary" onClick={()=>{handleClose() ; clear()}} >Aceptar</Button></Link>
+                    <Link to='/'><Button variant="primary" onClick={()=>{handleClose() ; clear()}} >Aceptar</Button></Link>
                 </ModalFooter>
             </Modal> : 
-                    <Modal show={show} onHide={handleClose}>
-                    <ModalHeader>
-                        Error:
-                    </ModalHeader>
-                    <ModalBody>
-                        Debes ingresar tus datos
-                    </ModalBody>
-                    <ModalFooter>
-                    <Button variant="primary" onClick={handleClose} >Aceptar</Button>
-                    </ModalFooter>
-                </Modal>}
+            <Modal show={show} onHide={handleClose}>
+                <ModalHeader>
+                    Error:
+                </ModalHeader>
+                <ModalBody>
+                    Debes ingresar tus datos
+                </ModalBody>
+                <ModalFooter>
+                <Button variant="primary" onClick={handleClose} >Aceptar</Button>
+                </ModalFooter>
+            </Modal>}
         </>
     )
 }

@@ -21,10 +21,10 @@ export const NavBar = () => {
           <Navbar.Collapse>
             <Nav className="menu">
               <NavDropdown title="Productos" className="links" id="basic-nav-dropdown">
-                <NavDropdown.Item href="/category/Camisas">Camisas</NavDropdown.Item>
-                <NavDropdown.Item href="/category/Remeras">Remeras</NavDropdown.Item>
-                <NavDropdown.Item href="/category/Blusas">Blusas</NavDropdown.Item>
-                <NavDropdown.Item href="/category/Pantalones">Pantalones</NavDropdown.Item>
+                <NavDropdown.Item ><Link to="/category/Camisas" className="menuLinks"> Camisas</Link ></NavDropdown.Item>
+                <NavDropdown.Item ><Link to="/category/Remeras" className="menuLinks"> Remeras</Link></NavDropdown.Item>
+                <NavDropdown.Item ><Link to="/category/Blusas" className="menuLinks"> Blusas</Link></NavDropdown.Item>
+                <NavDropdown.Item ><Link to="/category/Pantalones" className="menuLinks"> Pantalones</Link></NavDropdown.Item>
               </NavDropdown>
               <NavLink to="/About" className="links">Sobre nosotros</NavLink>
               <NavLink to="/Contact" className="links">Contacto</NavLink>
