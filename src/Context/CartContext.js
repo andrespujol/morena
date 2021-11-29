@@ -1,5 +1,5 @@
 import {  createContext, useState } from 'react';
-import swal from 'sweetalert';
+
 
 export const contexto = createContext()
 
@@ -8,7 +8,7 @@ const { Provider } = contexto
 export const CustomProvider = ({children}) => {
 
     const [cart,setCart] = useState([])
-    const [isInCart, setIsInCart] = useState(false)
+
 
 	const cartTotal = () => {
 		let total = 0;
@@ -20,24 +20,10 @@ export const CustomProvider = ({children}) => {
         }else {
             return cart.length
         }}
-    // const isInCart = () => {
-    //     cart.find(item => item.item.id === item.id)
-    // }
+
 
     const addItem = (item) => {
-        const inCartList = cart.find((i) => i.id === item.id)
-        setIsInCart(true)
-        if(inCartList){
-            swal({
-                title: "Ojo!",
-                text: `Ya tenés este producto en el carrito. Ahora tenés ${inCartList.quantity += item.quantity} unidades`,
-                icon: "warning",
-                button: "Aceptar",
-              });
-            setCart([...cart])
-            }else {
-                setCart([...cart, {...item}])
-            }
+        setCart([...cart, {...item}])
         }
 
     const removeItem = (itemId) => {
