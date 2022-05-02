@@ -10,7 +10,7 @@ export const CartWidget = () => {
     return (
         <div>
         <Link to="/cart"><img src={basket} alt="Carrito de compras" className="basket"/></Link>
-        <span className="cartQuantity">{getTotalQuantity()}</span>
+        <span className="cartQuantity">{getTotalQuantity}</span>
         </div>
     )   
 }

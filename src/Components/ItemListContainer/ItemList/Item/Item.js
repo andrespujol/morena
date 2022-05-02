@@ -15,3 +15,4 @@ export const Item = ({ title, pictureUrl, price, id}) => {
         </article>
     )
 }
+

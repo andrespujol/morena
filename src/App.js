@@ -24,7 +24,7 @@ const App = () =>
             <Route exact path='/'>
                 <ItemListContainer greeting="Indumentaria femenina"/>
             </Route>
-            <Route exact path='/category/:categoryName' component={ItemListContainer } />
+            <Route exact path='/category/:categoryName' component={ItemListContainer} />
             <Route exact path='/item/:id' component={ItemDetailContainer} />
             <Route exact path='/Cart' component={Cart} />
             <Route exact path='/About' component={About} />

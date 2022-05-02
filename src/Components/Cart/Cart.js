@@ -6,7 +6,7 @@ import 'firebase/firestore'
 import './Cart.css';
 
 export const Cart = () => {
-    const { cart , removeItem , clear, cartTotal } = useContext(contexto);
+    const { cart , removeItem , clear, getTotal } = useContext(contexto);
 
     if (cart.length > 0 ){
         return (
@@ -14,19 +14,19 @@ export const Cart = () => {
             <section>
                     <h1>Carrito</h1>
                 <div className="cart">
-                    {cart.map(item =>
-                    <article className="cartArticle" key={item.item.id}>
-                        <p>Artículo: {item.item.title}</p>
-                        <p>Unidades: {item.quantity}</p>
-                        <p className="cartArticleSubtotal">Subtotal: ${item.item.price * item.quantity}</p>
-                        <button onClick={()=>removeItem(item.item.id)}>borrar</button>
+                    {cart.map((item) =>
+                    <article className="cartArticle" key={item?.id}>
+                        <p>Artículo: {item?.title}</p>
+                        <p>Unidades: {item?.quantity}</p>
+                        <p className="cartArticleSubtotal">Subtotal: ${item?.price * item?.quantity}</p>
+                        <button onClick={()=>removeItem(item?.id)}>borrar</button>
                     </article>
                         
                     )}
                     <article className="checkout">
-                        <p>Total: ${cartTotal()}</p>
+                        <p>Total: ${getTotal()}</p>
                         <Link to="/Form" className="checkoutLink"><button className="checkoutBuy" >Confirmar compra</button></Link>
-                        <button className="checkoutClear" onClick={clear}>Vaciar carrito</button>
+                        <button className="checkoutClear" onClick={()=>clear()}>Vaciar carrito</button>
                     </article>
                 </div>
             </section>
